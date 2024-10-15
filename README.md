@@ -1,7 +1,7 @@
 
 # Weather App
 
-![Weather App Screenshot](screenshot.png)
+![Weather App Screenshot](weather-images\screenshot.PNG)
 
 ## Introduction
 The Weather App is a web application that allows users to search for current weather information based on their location. It provides details like temperature, humidity, wind speed, and weather conditions, along with a user-friendly interface.
