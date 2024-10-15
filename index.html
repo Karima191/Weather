@@ -1,61 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Weather</title>
+    <title>Weather App</title>
     <link rel="stylesheet" href="style.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
-
 <body>
-
     <div class="container">
         <div class="search-box">
             <i class='bx bxs-map'></i>
-            <input type="text" id="location-input" placeholder="enter your location">
-            <button id="search-btn"><i class="bx bx-search"></i></button>
+            <input type="text" class="search-box-input" placeholder="Enter your location" />
+            <button class="search-box-btn"><i class="bx bx-search"></i></button>
         </div>
-        <div id="weather-result" class="weather-info"></div>
 
         <div class="weather-box">
-            <div class="box">
-                <div class="info-weather">
-                    <div class="weather">
-                        <img src="weather-images/cloud.png">
-                        <p class="temperature">16<span>°C</span></p>
-                        <p class="description">Broken Clouds</p>
-                    </div>
-                </div>
-            </div>
+            <img src="weather-images/Broken Clouds.png" class="weather-icon" alt="Weather Icon" />
+            <p class="temperature">16<span>°C</span></p>
+            <p class="description">Broken Clouds</p>
         </div>
 
         <div class="weather-details">
             <div class="humidity">
                 <i class='bx bx-water'></i>
                 <div class="text">
-                    <div class="info-humidity">
-                        <span>0%</span>
-                    </div>
+                    <span class="humidity-value">0%</span>
                     <p>Humidity</p>
                 </div>
             </div>
             
-            <div class="wind"></div>
+            <div class="wind">
                 <i class='bx bx-wind'></i>
                 <div class="text">
-                    <div class="info-wind">
-                        <span>0Km/h</span>
-                    </div>
+                    <span class="wind-speed">0Km/h</span>
                     <p>Wind Speed</p>
                 </div>
             </div>
         </div>
-    </div>
 
+        <div class="error" style="display: none; color: red;">
+            City not found. Please try again.
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>

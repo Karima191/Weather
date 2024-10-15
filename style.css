@@ -1,10 +1,10 @@
-@import url(https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap);
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Poppins", sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 
 body {
@@ -12,147 +12,90 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: rgb(151, 61, 106);
+    background: url("weather-images/weath-background.png");
+    background-size: cover;
 }
 
 .container {
-    position: relative;
     width: 400px;
-    height: 555px;
-    background: rgb(70, 18, 34);
-    border-radius: 16px;
     padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(20px);
+    border-radius: 16px;
     color: #fff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
 }
 
 .search-box {
-    position: relative;
-    width: 100%;
-    height: 55px;
-    background: rgb(189, 77, 65);
     display: flex;
     align-items: center;
+    background: rgba(255, 255, 255, 0.5);
     border-radius: 8px;
-    padding: 10px;
     margin-bottom: 20px;
+    padding: 10px;
+    position: relative;
 }
 
 .search-box input {
-    position: calc();
     flex: 1;
-    height: 100%;
     border: none;
     outline: none;
     background: transparent;
     color: #fff;
-    padding: 0 20px;
-    font-size: 16px;
+    padding: 0 10px;
+    font-size: 18px;
     text-transform: capitalize;
+    font-weight: 600;
 }
 
 .search-box button {
     background: transparent;
     border: none;
     cursor: pointer;
-    color: #ffff;
-    font-size: 28px;
-}
-
-.search-box i {
-    left: 10px;
-    font-size: 28px;
-    color: #000;
-    background: transparent;
-}
-
-.weather-info {
-    margin-top: 30px;
-    text-align: center;
-}
-
-.weather-info h1 {
-    font-size: 48px;
-    margin-bottom: 10px;
-}
-
-.weather-info p {
-    font-size: 18px;
-    margin: 5px 0;
-}
-
-/* Responsive Design */
-@media (max-width: 420px) {
-    .container {
-        width: 100%;
-        height: auto;
-        padding: 20px;
-    }
-
-    .weather-info h1 {
-        font-size: 36px;
-    }
-
-    .weather-info p {
-        font-size: 16px;
-    }
+    color: #fff;
+    font-size: 30px;
 }
 
 .weather-box {
     text-align: center;
-    margin: 30px 0;
+    margin: 20px 0;
 }
 
 .weather-box img {
-    width: 60%;
+    width: 200px;
 }
 
 .weather-box .temperature {
     position: relative;
     font-size: 64px;
-    line-height: 0;
+    margin: 20px 1;
     font-weight: 700;
-    margin: 20px 1 3px -30px;
 }
 
+.weather-box .description {
+    font-weight: 500;
+    text-transform: capitalize;
+    font-size: 25px;
+}
 .weather-box .temperature span {
     position: absolute;
     font-size: 24px;
     margin-left: 4px;
-    margin: -20px 0;
-}
-
-.weather-box .description {
-    font-size: 22px;
-    font-weight: 500px;
-    text-transform: capitalize;
-    line-height: 4;
+    margin: 10px 0;
 }
 
 .weather-details {
-    position: absolute;
-    bottom: 40px;
-    left: 0;
-    width: 100%;
-    padding: 0 20px;
     display: flex;
+    justify-content: space-between;
 }
 
-.weather-details .humidity,
-.weather-details .wind {
+.weather-details .humidity, .weather-details .wind {
     display: flex;
     align-items: center;
-    width: 25%;
 }
 
-.weather-details .humidity {
-    padding-left: 15px;
-    justify-content: flex-start;
-}
-
-.weather-details{
-    padding-right: 15px;
-    justify-content: flex-end;
+.weather-details .text {
+    margin-left: 10px;
 }
 
 .weather-details i {
@@ -161,12 +104,43 @@ body {
 }
 
 .weather-details span {
-    display: inline-block;
-    font-size: 22px;
-    font-weight: 500;
+    font-size: 20px;
+    display: block;
 }
 
 .weather-details p {
     font-size: 14px;
-    font-weight: 500;
 }
+
+.search-box button:hover {
+    color: #FFD700; /* Example hover color */
+    transition: color 0.3s;
+}
+
+@media (max-width: 480px) {
+    .container {
+        width: 90%;
+        padding: 10px;
+    }
+    .weather-box .temperature {
+        font-size: 48px;
+    }
+}
+
+.loading {
+    border: 4px solid rgba(255, 255, 255, 0.5);
+    border-top: 4px solid #fff;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+}
+
+.error {
+    display: none; /* Initially hidden */
+    color: red;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 20px;
+}
+
