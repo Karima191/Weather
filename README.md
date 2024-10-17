@@ -15,7 +15,7 @@ The Weather App is a web application that allows users to search for current wea
 - [Author](#author)
 
 ## Demo
-You can view the live demo of the Weather App [here](your-deployment-link).
+You can view the live demo of the Weather App [here](https://www.youtube.com/watch?v=c0zdjuurgJw).
 
 ## Features
 - Search for weather by city name
@@ -35,7 +35,7 @@ To run the Weather App locally, follow these steps:
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/Karima191/weather-app.git
+   git clone https://github.com/Karima191/weather.git
    cd weather
 2. Open index.html in your browser or use a local server.
 
@@ -45,5 +45,7 @@ To run the Weather App locally, follow these steps:
 3. View the weather details displayed on the page.
 
 ## Author
-   Karima Selouani
-   Email: karima.sel91@gmail.com
+   * Karima Selouani
+   * Email: karima.sel91@gmail.com
+   * Github: [Karima191](https://github.com/Karima191)
+   * Linkedin: https://www.linkedin.com/in/karima-selouani-90a054279/
