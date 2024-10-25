@@ -27,13 +27,14 @@ body {
 }
 
 .search-box {
+    position: relative;
     display: flex;
     align-items: center;
     background: rgba(255, 255, 255, 0.5);
     border-radius: 8px;
     margin-bottom: 20px;
     padding: 10px;
-    position: relative;
+    
 }
 
 .search-box input {
@@ -43,9 +44,10 @@ body {
     background: transparent;
     color: #fff;
     padding: 0 10px;
-    font-size: 18px;
+    font-size: 16px;
     text-transform: capitalize;
     font-weight: 600;
+    width: 100%;
 }
 
 .search-box button {
@@ -53,7 +55,30 @@ body {
     border: none;
     cursor: pointer;
     color: #fff;
-    font-size: 30px;
+    font-size: 24px;
+    width: auto;
+    
+}
+
+@media (max-width: 480px) {
+    .search-box {
+        padding: 5px;
+    }
+    .search-box input {
+        font-size: 16px;
+        padding: 5px 8px;
+        display: block;
+    }
+    .search-box button {
+        font-size: 24px; /* Reduce button icon size */
+        display: block;
+    }
+    .weather-box .temperature {
+        font-size: 48px;
+    }
+    .weather-box img {
+        width: 150px; /* Adjust image size for smaller screens */
+    }
 }
 
 .weather-box {
