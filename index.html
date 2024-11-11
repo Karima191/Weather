@@ -2,26 +2,26 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Weather App</title>
+    <title>Weather and Tourist Places App</title>
     <link rel="stylesheet" href="style.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
     <div class="container">
+        <!-- Search Box -->
         <div class="search-box">
             <i class='bx bxs-map'></i>
             <input type="text" class="search-box-input" placeholder="Enter your location" />
             <button class="search-box-btn" title="Search for weather"><i class="bx bx-search"></i></button>
         </div>
 
+        <!-- Weather Information Section -->
         <div class="weather-box">
             <img src="weather-images/Broken Clouds.png" class="weather-icon" alt="Weather Icon" />
             <p class="temperature">0<span>°C</span></p>
             <p class="description">Broken Clouds</p>
         </div>
-
         <div class="weather-details">
             <div class="humidity">
                 <i class='bx bx-water'></i>
@@ -40,8 +40,15 @@
             </div>
         </div>
 
-        <div class="error" style="display: none; color: red;">
+        <!-- Error Message -->
+        <div class="error" role="alert" aria-live="polite">
             City not found. Please try again.
+        </div>
+
+        <!-- Tourist Places Section -->
+        <div id="tourist-places">
+            <h2>Tourist Places</h2>
+            <div class="places-content"></div>
         </div>
     </div>
 
