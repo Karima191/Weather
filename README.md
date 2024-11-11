@@ -1,7 +1,7 @@
 
 # Weather App
 
-![screenshot](https://github.com/user-attachments/assets/a81e887c-dd10-4016-80cb-f4bace8107f7)
+(https://github.com/user-attachments/assets/e267859b-6f8c-43af-bfe4-291f984b761d)
 
 ## Introduction
 The Weather App is a web application that allows users to search for current weather information based on their location. It provides details like temperature, humidity, wind speed, and weather conditions, along with a user-friendly interface.
